@@ -4,18 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>RETRO SITE</title>
-  <link rel ="stylesheet" href ="main.css" >
+    <link rel ="stylesheet" href ="main.css">
+  <title>Document</title>
+  <style>
+body { /* загальне оформлення тексту */
+margin : 0; /* віддаль між блоками відсутня */
+padding : 10px; /* відступ вмісту від межі блоку = 10px */
+font-family: Verdana, Tahoma, arial, geneva, Helvetica, sans-serif;
+/* типи шрифтів*/
+background-color: #ffffff; /* білий колір фону*/
+}
+/* місце поповнення правил ……..*/
+body div#menunav ul li ul {
+display: none; /*приховування випадаючого меню до вибору верхнього пункту*/
+}
+div#menunav ul li:hover ul, div#menunav ul li ul:hover {
+display: block; /* відображення випадаючого підменю при виборі верхнього
+пункту або ж і пункту самого підменю */
+}
+</style>
 </head>
 <body>
-  <h1> retro web site</h1>
-  <nav>
-    <a href="#">home</a>
-    <a href="#">general</a>
-    <a href="#">coolies</a>
-    <a href="#">sessions</a>
-    <a href="#">database</a>
-    <div class="animation start-home"></div>
-  </nav>
+  <div id="menunav">
+<ul>
+<li><a href="#">розділ 1</a>
+<ul>
+<li><a href="#">підрозділ 1</a></li>
+<li><a href="#">підрозділ 2</a></li>
+<li><a href="#">підрозділ 3</a></li>
+<li><a href="#">підрозділ 4</a></li>
+</ul>
+</li>
+<li><a href="#">розділ 2</a>
+<ul>
+<li><a href="#">підрозділ 1</a></li>
+<li><a href="#">підрозділ 2</a></li>
+<li><a href="#">підрозділ 3</a></li>
+<li><a href="#">підрозділ 4</a></li>
+</ul>
+</li>
+<li><a href="#">розділ 3</a>
+<ul>
+<li><a href="#">підрозділ 1</a></li>
+<li><a href="#">підрозділ 2</a></li>
+<li><a href="#">підрозділ 3</a></li>
+</ul>
+</li>
+<li><a href="#">розділ 4</a>
+<ul>
+<li><a href="#">підрозділ 1</a></li>
+<li><a href="#">підрозділ 2</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </body>
 </html>
