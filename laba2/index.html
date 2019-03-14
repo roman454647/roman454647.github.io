@@ -7,55 +7,59 @@
     <link rel ="stylesheet" href ="main.css">
   <title>Document</title>
   <style>
-body { /* загальне оформлення тексту */
-margin : 0; /* віддаль між блоками відсутня */
-padding : 10px; /* відступ вмісту від межі блоку = 10px */
+body {
+margin : 0;
+padding : 10px;
 font-family: Verdana, Tahoma, arial, geneva, Helvetica, sans-serif;
-/* типи шрифтів*/
-background-color: #ffffff; /* білий колір фону*/
+
+background-color: #ffffff;
 }
-/* місце поповнення правил ……..*/
+
 body div#menunav ul li ul {
-display: none; /*приховування випадаючого меню до вибору верхнього пункту*/
+display: none;
 }
 div#menunav ul li:hover ul, div#menunav ul li ul:hover {
-display: block; /* відображення випадаючого підменю при виборі верхнього
-пункту або ж і пункту самого підменю */
+display: block;
 }
 </style>
 </head>
 <body>
   <div id="menunav">
 <ul>
-<li><a href="#">розділ 1</a>
+<li><a href="#">home</a></li>
+<li><a href="#">form</a>
 <ul>
-<li><a href="#">підрозділ 1</a></li>
-<li><a href="#">підрозділ 2</a></li>
-<li><a href="#">підрозділ 3</a></li>
-<li><a href="#">підрозділ 4</a></li>
+<li><a href="#">GET</a></li>
+<li><a href="#">POST</a></li>
+<li><a href="#">file upload</a></li>
 </ul>
 </li>
-<li><a href="#">розділ 2</a>
+<li><a href="#">cookies</a>
 <ul>
-<li><a href="#">підрозділ 1</a></li>
-<li><a href="#">підрозділ 2</a></li>
-<li><a href="#">підрозділ 3</a></li>
-<li><a href="#">підрозділ 4</a></li>
+<li><a href="#">enabled/disabled</a></li>
+<li><a href="#">create/retrieve</a></li>
+<li><a href="#">modify/delete</a></li>
 </ul>
 </li>
-<li><a href="#">розділ 3</a>
+<li><a href="#">data/time</a>
 <ul>
-<li><a href="#">підрозділ 1</a></li>
-<li><a href="#">підрозділ 2</a></li>
-<li><a href="#">підрозділ 3</a></li>
+<li><a href="#">today is</a></li>
+<li><a href="#">timezone</a></li>
+<li><a href="#">timestamp</a></li>
 </ul>
 </li>
-<li><a href="#">розділ 4</a>
+<li><a href="#">database</a>
 <ul>
-<li><a href="#">підрозділ 1</a></li>
-<li><a href="#">підрозділ 2</a></li>
+<li><a href="#">reserved</a></li>
+
+</ul>
+<li><a href="#">INFO</a>
+<ul>
+<li><a href="#">phpinfo</a></li>
+
 </ul>
 </li>
+
 </ul>
 </div>
 </body>
