@@ -58,21 +58,21 @@ nav .start-home, a:nth-child(1):hover ~.animation{
 }
 nav .start-home, a:nth-child(2):hover ~.animation{
    width:110px;
-   left:0;
+   left:110;
    background-color: #1abc9c;
 }
 nav .start-home, a:nth-child(3):hover ~.animation{
-   width:110px;
+   width:220px;
    left:0;
    background-color: #1abc9c;
 }
 nav .start-home, a:nth-child(4):hover ~.animation{
-   width:110px;
+   width:330px;
    left:0;
    background-color: #1abc9c;
 }
 nav .start-home, a:nth-child(5):hover ~.animation{
-   width:110px;
+   width:440px;
    left:0;
    background-color: #1abc9c;
 }
