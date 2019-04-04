@@ -5,7 +5,7 @@
             box-sizing: border-box;
         }
         body {
-            background-image: 'jpg/scitour_2019_winter_19.jpg';
+            background-image: url(jpg/scitour_2019_winter_19.jpg);
             -webkit-background-size:cover;
             background-size:cover;
             background-position: center center;
