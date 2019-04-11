@@ -376,6 +376,10 @@ a:hover, a:focus, a:active {
   color: #ecb807 !important;
 }
 .registration_form{
-   padding-left: 700px;
+   display:flex;
+   justify-content: center;
+
+   
+
 
 }
