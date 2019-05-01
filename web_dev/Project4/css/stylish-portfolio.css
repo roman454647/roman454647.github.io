@@ -378,8 +378,26 @@ a:hover, a:focus, a:active {
 .registration_form{
    display:flex;
    justify-content: center;
+}
+.registration_form_java{
+   display:flex;
+   justify-content: center;
+}
 
-   
+.drag_and_drop{
+  display:flex;
+  justify-content: center;
+}
 
+#dr1, #dr2 {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid black;
 
+}
+.web_workers{
+  display:flex;
+  justify-content: center;
 }

@@ -20,7 +20,29 @@
   <script src="https://code.iconify.design/1/1.0.0/iconify.min.js"></script>
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <script>
+  function validateForm() {
+ var x = document.forms["myForm"]["fname"].value;
+ if (x <= 10 || x>=1000) {
+   alert("Name must be in the range");
+   return false;
+ }
+}
+function allowDrop(ev) {
+  ev.preventDefault();
+}
 
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+</script>
 </head>
 
 <body id="page-top">
@@ -198,9 +220,9 @@
   <!-- Call to Action -->
   <section class="content-section bg-primary text-white">
     <div class="container text-center">
-      <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-      <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-      <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+      <h2 class="mb-4">what is it ,travel?</h2>
+      <a href="black_hole.html" class="btn btn-xl btn-light mr-4">some text animation!</a>
+      <a href="motivation_text.html" class="btn btn-xl btn-dark">Look at the black hole!</a>
     </div>
   </section>
 
@@ -219,6 +241,66 @@
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehd9RAmhfn15so-cY9F6CV-gVRe24h7jMOBcBAVvPbUUlF4w/viewform?embedded=true" width="500" height="500" frameborder="0" marginheight="0" marginwidth="0">Завантаження...</iframe>
 
   </section>
+
+
+
+  <!-- registration form with javascript -->
+
+
+  <section class ='registration_form_java'>
+    <form name="myForm" action="action_page.php" onsubmit="return validateForm()" method="post">
+    your number must be in the range 10-1000: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+  </form>
+</section>
+
+
+
+
+<!-- function drag and drop-->
+
+
+<section class="drag_and_drop">
+
+<h10>Drag and Drop</h10>
+
+
+<div id="dr1" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="img/scitour.JPG" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="dr2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</section>
+
+<!-- web_workers-->
+<section class = 'web_workers'>
+     <div class="controls" tabindex="0">
+    <form>
+        <div>
+          <label for="number1">Multiply number 1: </label>
+          <input type="text" id="number1" value="0">
+        </div>
+        <div>
+          <label for="number2">Multiply number 2: </label>
+          <input type="text" id="number2" value="0">
+        </div>
+      </form>
+
+      <p class="result">Result: 0</p>
+        </div>
+       <script src="main.js"></script>
+</section>
+
+<!-- animation -->
+
+<section class = 'animation button'>
+
+
+
+</section>
+
+
 
   <!-- Footer -->
   <footer class="footer text-center">
