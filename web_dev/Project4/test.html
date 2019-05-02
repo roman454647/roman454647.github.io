@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <table id="table"></table>
+  <script>
+
+  var url ="http://ip.jsontest.com/"
+  function getJSON(url) {
+         var resp ;
+         var xmlHttp ;
+
+         resp  = '' ;
+         xmlHttp = new XMLHttpRequest();
+
+         if(xmlHttp != null)
+         {
+             xmlHttp.open( "GET", url, false );
+             xmlHttp.send( null );
+             resp = xmlHttp.responseText;
+         }
+
+         return resp ;
+     };
+var data = getJSON(url);
+// generate HTML string and insert it
+	var str = "";
+	for(var row=0; row<data.length; row++) {
+		str += "<tr>"; // open HTML row
+		for(var col=0; col<data[row].length; col++)
+			str += "<td>" + data[row][col].name + "</td>";
+		str += "</tr>"; // close HTML row
+
+
+	// assumes the table element has id "table":
+	// <table id="table"></table>
+	var table = document.getElementById("table");
+	table.innerHTML = 'new element';
+}
+</script>
+</body>
+</html>
