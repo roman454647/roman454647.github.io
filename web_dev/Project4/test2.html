@@ -1,30 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Convert JSON Data to HTML Table</title>
-    <style>
-        th, td, p, input {
-            font:14px Verdana;
-        }
-        table, th, td
-        {
-            border: solid 1px #DDD;
-            border-collapse: collapse;
-            padding: 2px 3px;
-            text-align: center;
-        }
-        th {
-            font-weight:bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-    <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
-    <p id="showData"></p>
-</body>
+  <p id="ip"></p>
+  <p id="http"></p>
+  <p id="date_time"></p>
+  <p id="echo"></p>
+  <p id="validate"></p>
 
-<script>
-  var url =" http://md5.jsontest.com/?text=[text"
+  <p id="md5"></p>
+  <script>
+
   function getJSON(url) {
          var resp ;
          var xmlHttp ;
@@ -41,50 +32,36 @@
 
          return resp ;
      };
-   var data = getJSON(url);
-    function CreateTableFromJSON() {
-        var myBooks = []
-        myBooks.push(data);
+var url ="http://ip.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("ip").innerHTML = "your ip is "+ myObj.ip;
 
-        // EXTRACT VALUE FOR HTML HEADER.
+var url ="http://headers.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("http").innerHTML = " -- host---:  "+ myObj.Host;
 
-        var col = [];
-        for (var i = 0; i < myBooks.length; i++) {
-            for (var key in myBooks[i]) {
-                if (col.indexOf(key) === -1) {
-                    col.push(key);
-                }
-            }
-        }
+var url ="http://date.jsontest.com"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("date_time").innerHTML = myObj.date + " "+ "////// time ////"+ myObj.time;
 
-        // CREATE DYNAMIC TABLE.
-        var table = document.createElement("table");
+var url ="http://validate.jsontest.com/?json=[JSON-code-to-validate]"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("validate").innerHTML ="///size///" + myObj.size+ "  ///validate///  "+myObj.validate+ " ////empty//// "+ myObj.empty;
 
-        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+var url ="http://ip.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("ip").innerHTML = "    Your ip is   "+myObj.ip;
 
-        var tr = table.insertRow(-1);                   // TABLE ROW.
+var url ="http://md5.jsontest.com/?text=[text"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("md5").innerHTML = "/////md5/////  " + myObj.md5+"  "+"  //// original  ////   "+ myObj.original;
 
-        for (var i = 0; i < col.length; i++) {
-            var th = document.createElement("th");      // TABLE HEADER.
-            th.innerHTML = col[i];
-            tr.appendChild(th);
-        }
-
-        // ADD JSON DATA TO THE TABLE AS ROWS.
-        for (var i = 0; i < myBooks.length; i++) {
-
-            tr = table.insertRow(-1);
-
-            for (var j = 0; j < col.length; j++) {
-                var tabCell = tr.insertCell(-1);
-                tabCell.innerHTML = myBooks[i][col[j]];
-            }
-        }
-
-        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-        var divContainer = document.getElementById("showData");
-        divContainer.innerHTML = "";
-        divContainer.appendChild(table);
-    }
 </script>
+</body>
 </html>

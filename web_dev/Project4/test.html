@@ -7,10 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <table id="table"></table>
+  <p id="ip"></p>
+  <p id="http"></p>
+  <p id="date_time"></p>
+  <p id="echo"></p>
+  <p id="validate"></p>
+  <p id="arbitrary"></p>
+  <p id="md5"></p>
   <script>
 
-  var url ="http://ip.jsontest.com/"
   function getJSON(url) {
          var resp ;
          var xmlHttp ;
@@ -27,21 +32,42 @@
 
          return resp ;
      };
+var url ="http://ip.jsontest.com/"
 var data = getJSON(url);
-// generate HTML string and insert it
-	var str = "";
-	for(var row=0; row<data.length; row++) {
-		str += "<tr>"; // open HTML row
-		for(var col=0; col<data[row].length; col++)
-			str += "<td>" + data[row][col].name + "</td>";
-		str += "</tr>"; // close HTML row
+var myObj = JSON.parse(data);
+document.getElementById("ip").innerHTML = myObj.ip;
+
+var url ="http://headers.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("http").innerHTML = myObj.Accept +" "+ "host"+ myObj.Host;
+
+var url ="http://date.jsontest.com"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("date_time").innerHTML = myObj.date + " "+ "time"+ myObj.time;
+
+var url ="http://echo.jsontest.com/insert-key-here/insert-value-here/key/value"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("echo").innerHTML ="value = "  myObj.key;
+
+var url ="http://validate.jsontest.com/?json=[JSON-code-to-validate]"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("validate").innerHTML ="size" + myObj.size+ "validate "+myObj.validate+ " empty "+ myObj.empty;
+
+var url ="http://code.jsontest.com"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("arbitrary").innerHTML = myObj.ip;
+
+var url ="http://md5.jsontest.com/?text=[text"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("md5").innerHTML = "md5  " + myObj.md5+""+"original"+myObj.original;
 
 
-	// assumes the table element has id "table":
-	// <table id="table"></table>
-	var table = document.getElementById("table");
-	table.innerHTML = 'new element';
-}
 </script>
 </body>
 </html>

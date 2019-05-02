@@ -248,7 +248,7 @@ function drop(ev) {
 
 
   <section class ='registration_form_java'>
-  
+
     <form name="myForm" action="action_page.php" onsubmit="return validateForm()" method="post">
     your number must be in the range 10-1000: <input type="text" name="fname">
     <input type="submit" value="Submit">
@@ -267,7 +267,7 @@ function drop(ev) {
 
 
 <div id="dr1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="img/scitour.JPG" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+  <img src="img/scitour.JPG" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="100">
 </div>
 
 <div id="dr2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -294,7 +294,7 @@ function drop(ev) {
 </section>
 
 <!-- web storage -->
-<section>
+<section class =' web_storage'>
   <script>
   function clickCounter() {
     if (typeof(Storage) !== "undefined") {
@@ -315,6 +315,13 @@ function drop(ev) {
   <p>Click the button to see the counter increase.</p>
   <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
   </div>
+</section>
+
+<section class = "json">
+
+
+  <a href="test2.html" class="btn btn-xl btn-light mr-4">some json from json test</a>
+
 </section>
 
 <!-- bitkoin with ajax -->
@@ -366,7 +373,6 @@ function drop(ev) {
 }
 </script>
 </section>
-
 
   <!-- Footer -->
   <footer class="footer text-center">

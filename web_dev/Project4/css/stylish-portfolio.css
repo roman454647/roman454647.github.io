@@ -401,3 +401,12 @@ a:hover, a:focus, a:active {
   display:flex;
   justify-content: center;
 }
+
+.web_storage{
+  display:flex;
+  justify-content: center;
+}
+.json{
+  display:flex;
+  justify-content: center;
+}
