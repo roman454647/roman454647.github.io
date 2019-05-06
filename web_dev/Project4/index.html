@@ -257,14 +257,13 @@ function drop(ev) {
   </section>
 
   <section class ="myform">
-    <p><strong>Note:</strong> The pattern attribute of the input tag is not supported in Internet Explorer 9 and earlier versions
-    or Safari 10 and earlier.</p>
+
    <form name ="myForm1" action="/action_page1.php">
      Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
      <input type="submit">
    </form>
 
- 
+
   </section>
 
 
@@ -329,159 +328,7 @@ function drop(ev) {
 </section>
 
 <section class = "json">
-
-
-
-
-  <p id="demo"></p>
-  <button onclick="ip__adress()">ip_adress</button>
-  <button onclick="headers()">headers</button>
-  <button onclick="date_time()">date_time</button>
-  <button onclick="mds()">mds</button>
-  <button onclick="arbitrary()">arbitrary_js_code</button>
-  <button onclick="cookies()">Cookie</button>
-  <script>
-  function ip__adress() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var key;
-        var a =JSON.stringify(myObj, null, 4)
-        alert("Your ip adress  "+myObj.ip);
-
-      }
-    };
-    xmlhttp.open("GET", "http://ip.jsontest.com/", true);
-    xmlhttp.send();
-  }
-  function mds() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var key;
-        alert(JSON.stringify(myObj, null, 4));
-
-      }
-    };
-    xmlhttp.open("GET", " http://md5.jsontest.com/?text=[some_text_for_lab_5]", true);
-    xmlhttp.send();
-
-  }
-  function headers() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var key;
-        alert(JSON.stringify(myObj, null, 4));
-
-      }
-    };
-    xmlhttp.open("GET", "http://headers.jsontest.com/", true);
-    xmlhttp.send();
-  }
-  function date_time() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var key;
-        alert(JSON.stringify(myObj, null, 4));
-
-      }
-    };
-    xmlhttp.open("GET", "http://date.jsontest.com", true);
-    xmlhttp.send();
-  }
-  function arbitrary() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var key;
-        var a =JSON.stringify(myObj, null, 4)
-        alert("Your ip adress  "+myObj.ip);
-
-      }
-    };
-    xmlhttp.open("GET", "http://ip.jsontest.com/", true);
-    xmlhttp.send();
-  };
-
-  function cookies() {
-    var b = new Date();
-    function setCookie(cname,cvalue,exdays) {
-    var d = new Date();
-    d.setTime(d.getTime());
-
-    document.cookie =cname+"="+cvalue+';'+";path=/";
-  }
-  setCookie('jsontestdotcom',b.getTime(),3);
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var key;
-        alert(JSON.stringify(myObj, null, 4));
-        }
-    };
-    xmlhttp.open("GET", " http://cookie.jsontest.com/", true);
-    xmlhttp.send();
-  };
-
-
-</section>
-
-<!-- bitkoin with ajax -->
-<section class ='bitkoin'>
-
-  <style type="text/css">
-
-  #data {
-    width: 400px;
-    border: 1px dashed black;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 10px;
-  }
-  #logo {
-    width: 320px;
-    height: 320px;
-    margin: 0 auto;
-    margin-top: 50px;
-    display: block;
-  }
-</style>
-
-
-  <img id="logo" src="https://www.ssaurel.com/cryptocoins/screenshots/web_hi_res_512.png" />
-  <div id="data" />
-  <script type="text/javascript">
-    var xmlhttp = new XMLHttpRequest();
-    var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4  &&  this.status == 200) {
-        var json = JSON.parse(this.responseText);
-        parseJson(json);
-      }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-    function parseJson(json) {
-      var time = "<b>Last Updated : " + json["time"]["updated"] + "</b>";
-      var usdValue = "1 BTC equals to $" + json["bpi"]["USD"]["rate"];
-      var gbpValue = "1 BTC equals to &pound;" + json["bpi"]["GBP"]["rate"];
-      var euroValue = "1 BTC equals to &euro;" + json["bpi"]["EUR"]["rate"];
-      document.getElementById("data").innerHTML = time +
-	       "<br /><br />" + usdValue +
-		   "<br />" + gbpValue +
-		   "<br />" + euroValue;
-}
-</script>
+<a href="test.html" class="btn btn-xl btn-light mr-4">json data from test json</a>
 </section>
 
   <!-- Footer -->
