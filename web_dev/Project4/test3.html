@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use the XMLHttpRequest to get the content of a file.</h2>
+
+
+<p id="demo"></p>
+<button onclick="ip__adress()">ip_adress</button>
+
+<script>
+function ip__adress() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      var a =JSON.stringify(myObj, null, 4)
+      alert("Your ip adress  "+myObj.ip);
+
+    }
+  };
+  xmlhttp.open("GET", "http://ip.jsontest.com/", true);
+  xmlhttp.send();
+}
+
+
+</script>
+</body>
+</html>
