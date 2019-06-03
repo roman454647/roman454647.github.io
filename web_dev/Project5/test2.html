@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p id="ip"></p>
+  <p id="http"></p>
+  <p id="date_time"></p>
+  <p id="echo"></p>
+  <p id="validate"></p>
+   <p id="md5"></p>
+  <script>
+
+  function getJSON(url) {
+         var resp ;
+         var xmlHttp ;
+
+         resp  = '' ;
+         xmlHttp = new XMLHttpRequest();
+
+         if(xmlHttp != null)
+         {
+             xmlHttp.open( "GET", url, false );
+             xmlHttp.send( null );
+             resp = xmlHttp.responseText;
+         }
+
+         return resp ;
+     };
+var url ="http://ip.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("ip").innerHTML = "your ip is "+ myObj.ip;
+
+var url ="http://headers.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("http").innerHTML = " -- host---:  "+ myObj.Host;
+
+var url ="http://date.jsontest.com"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("date_time").innerHTML = myObj.date + " "+ "////// time ////"+ myObj.time;
+
+var url ="http://validate.jsontest.com/?json=[JSON-code-to-validate]"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("validate").innerHTML ="///size///" + myObj.size+ "  ///validate///  "+myObj.validate+ " ////empty//// "+ myObj.empty;
+
+var url ="http://ip.jsontest.com/"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("ip").innerHTML = "    Your ip is   "+myObj.ip;
+
+var url ="http://md5.jsontest.com/?text=[text"
+var data = getJSON(url);
+var myObj = JSON.parse(data);
+document.getElementById("md5").innerHTML = "/////md5/////  " + myObj.md5+"  "+"  //// original  ////   "+ myObj.original;
+
+</script>
+</body>
+</html>

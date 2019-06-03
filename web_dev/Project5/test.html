@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Use the XMLHttpRequest to get the content .</h2>
+
+
+<p id="demo"></p>
+<button onclick="ip__adress()">ip_adress</button>
+<button onclick="headers()">headers</button>
+<button onclick="date_time()">date_time</button>
+<button onclick="mds()">mds</button>
+<button onclick="arbitrary()">arbitrary_js_code</button>
+<button onclick="cookies()">Cookie</button>
+<script>
+function ip__adress() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      var a =JSON.stringify(myObj, null, 4)
+      alert("Your ip adress  "+myObj.ip);
+
+    }
+  };
+  xmlhttp.open("GET", 'http://ip.jsontest.com/', true);
+  xmlhttp.send();
+}
+function mds() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      alert(JSON.stringify(myObj, null, 4));
+
+    }
+  };
+  xmlhttp.open("GET", " http://md5.jsontest.com/?text=[some_text_for_lab_5]", true);
+  xmlhttp.send();
+
+}
+function headers() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      alert(JSON.stringify(myObj, null, 4));
+
+    }
+  };
+  xmlhttp.open("GET", "http://headers.jsontest.com/", true);
+  xmlhttp.send();
+}
+function date_time() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      alert(JSON.stringify(myObj, null, 4));
+
+    }
+  };
+  xmlhttp.open("GET", 'http://date.jsontest.com', true);
+  xmlhttp.send();
+}
+function arbitrary() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      var a =JSON.stringify(myObj, null, 4)
+      alert("Your ip adress  "+myObj.ip);
+
+    }
+  };
+  xmlhttp.open("GET", "http://ip.jsontest.com/", true);
+  xmlhttp.send();
+};
+
+function cookies() {
+  var b = new Date();
+  function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime());
+
+  document.cookie =cname+"="+cvalue+';'+";path=/";
+}
+setCookie('jsontestdotcom',b.getTime(),3);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      var myObj = JSON.parse(this.responseText);
+      var key;
+      alert(JSON.stringify(myObj, null, 4));
+      }
+  };
+  xmlhttp.open("GET", " http://cookie.jsontest.com/", true);
+  xmlhttp.send();
+};
+
+
+</script>
+</body>
+</html>
