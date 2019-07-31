@@ -6,10 +6,10 @@
 
   animation-name: spin;
 
-  animation-duration:2s;
+  animation-duration:1s;
 
 //функція проходження анімації -швидкість і час
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ;
 
 //ease,ease-in,ease-in-out
   animation-delay:1s;
@@ -18,7 +18,7 @@
   animation-iteration-count: 4;
 
 //напрямок анімації
-  animation-direction: alternate-reverse;
+//animation-direction: alternate-reverse;
 
 /* визначає як має виглядати об'єкт по завершенню анімації
 animation-fill-mode :
@@ -38,7 +38,7 @@ animation-fill-mode :
          animation:spin 2s linear 1s 4 alternate-reverse;*/
 
 @keyframes spin{
-  0%{
+  0%
     transform:rotate(0deg);
   }
 
