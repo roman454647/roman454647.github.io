@@ -38,7 +38,7 @@ animation-fill-mode :
          animation:spin 2s linear 1s 4 alternate-reverse;*/
 
 @keyframes spin{
-  0%
+  0%{
     transform:rotate(0deg);
   }
 
