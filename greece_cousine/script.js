@@ -1,6 +1,6 @@
 //function to show ,hide nav bar
 navbar.onclick = function myFunction(){
-  var x = document.getElementById('navigation1');
+  var x = document.getElementById('navig');
 
   if(x.className ==="navigation"){
     x.className+=" responsive";

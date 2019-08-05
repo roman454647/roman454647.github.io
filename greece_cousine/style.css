@@ -53,6 +53,9 @@ nav{
 .navigation a:hover{
   border-top:3px solid #c6c3b9;
 }
+.navigation .span-logo:hover{
+  filter:sepia(1);
+}
 
 .navigation a.span-logo{
   padding-left:10px;
@@ -79,7 +82,7 @@ nav{
    flex-wrap:wrap;
    width:100%;
    text-align: center;
-   padding:20px 0 100px 0;
+   padding:10px 0 100px 0;
 }
 .promo h1{
   text-align: center;
@@ -87,12 +90,13 @@ nav{
   font-family: yeseva;
   font-size:100px;
   font-weight: bold;
-  font-style: italic;
+
 }
 .promo .buttons{
   margin-left:0%;
   margin-top: 3px;
   margin-bottom:33px;
+  max-width:100%;
 }
 
 .promo .buttons input{
@@ -113,6 +117,7 @@ nav{
   opacity: 0.3;
 
 }
+
 /*ABOUT*/
 .wrapper{
 
@@ -488,7 +493,7 @@ input{
 }
 
 input[type=text]:focus {
-  border: 3px solid #c9a131;
+  outline: : 3px solid #c9a131;
 }
 input[placeholder]{
   font-family: cursive;
@@ -569,16 +574,7 @@ input[placeholder]{
   .section-ingredients{
   background-position: 80% ;
   }
-  .About{
-    margin-left: 10%
-  }
-  .open{
-    margin-left:100px;
-  }
-  .Our-Location{
-    margin-left: 100px;
 
-}
 
 
 
@@ -591,42 +587,33 @@ input[placeholder]{
   .section-ingredients{
   background-position: 83% ;
   }
-   .left-side{
+  .book_form .left-side{
      align-items: center;
      margin-left: 0%
    }
+.About{
+  margin-left: 0px;
+}
 
-  .book_form{
-    display: flex;
-    flex-direction: column;
-    margin:0 auto;
-    padding-bottom: 30px;
-    align-items: center;
-  }
+}
 
 @media screen and (max-width:1332px){
   nav{
     margin-left: 4%;
   }
-  main .Rewiews{
-    display:flex;
-    text-align: center;
-    margin-left: 10%
-  }
-  main .rewiew{
-    text-align: center;
-    margin-left: 10%;
-  }
+
 
 
 }
 
-}
+
 @media screen and (max-width:1278px){
   .navigation a{
     display:none;
   }
+
   .navigation a.icon{
+    color: #ffffff;
     float:right;
     margin-top:-29px;
     display:block;
@@ -645,6 +632,7 @@ input[placeholder]{
     height:340px:
   }
   .navigation.responsive a.icon{
+    color: #ffffff;
     position: absolute;
     top:-50px;
     right:-200px;
@@ -659,7 +647,7 @@ input[placeholder]{
 
 
   .mw-100{
-    max-width: -width: 100%;
+    max-width: 100%;
     margin-left: 0;
   }
   .section-about{
@@ -689,6 +677,7 @@ input[placeholder]{
 }
 .section-ingredients p{
   text-align: center;
+  padding-left: 3px;
   margin-left: 0% ;
 }
   .section-ingredients h1{
@@ -704,12 +693,12 @@ input[placeholder]{
 
 main  .section-menu{
     flex-direction: column;
-    text-align: center;
+
     align-items: center;
     justify-content: center;
 
   }
-main .divider3{
+.section-ingredients .divider3{
   margin-left: 0px;
   text-align: center;
 
@@ -723,24 +712,35 @@ main .right-part{
 
 
 
-
-main wrapper-rewiews{
-
-}
 main .Rewiews{
-  background-position: center;
+
   display:flex;
-  text-align: center;
-  margin-left: 10%
+  justify-content: center;
+  margin-left: 10%;
 }
 main .rewiew{
   text-align: center;
-  margin-left: 10%;
+  margin-left: 0%;
 }
 
 
 
+.book_form .left_side{
+  max-width: 70%;
+}
 
+.book_form .right-side{
+  padding: 0 100px 0;
+  margin-left: 0px;
+}
+
+.book_form{
+ display: flex;
+ flex-direction: column;
+ margin:0 auto;
+ padding-bottom: 30px;
+ align-items: center;
+}
 
 
 .info{
@@ -756,29 +756,31 @@ main .rewiew{
    font-size: 13px;
    text-align: center;
  }
+ .info div{
+   margin-left: 0px;
+ }
+}
 
 
 
-@media screen and(max-width:900px) {
+@media screen and (max-width:900px) {
   main .wrapper-rewiews{
     text-align: center;
-    margin-left: -5%;
+    margin-left: 0%;
   }
   main .Rewiews{
     background-position: center;
     display:flex;
-    align-items: flex-start;
-    margin-left: 10%
+   justify-content: center;
+    margin-left: 0%
   }
-  main .rewiew{
+  .Rewiews .rewiew{
     text-align: center;
-    margin-left: 10%;
+    margin-left: 0%;
   }
 
   .mv-100{
     width:60%;
   }
-}
-
 
 }
