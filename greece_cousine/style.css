@@ -727,6 +727,7 @@ main .rewiew{
 
 .book_form .left_side{
   max-width: 70%;
+  
 }
 
 .book_form .right-side{
@@ -782,5 +783,10 @@ main .rewiew{
   .mv-100{
     width:60%;
   }
-
+}
+@media screen and(max-width:660px){
+  #left_inputs{
+    justify-content: center;
+     margin-left: 0px;
+  }
 }
