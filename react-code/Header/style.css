@@ -1,0 +1,136 @@
+header {
+  margin-left: 0;
+  width: 100%;
+  display: flex;
+}
+
+.header_logo {
+  margin-left: 17%;
+  margin-top: 4px;
+}
+
+
+nav {
+  margin-top: 46px;
+  margin-left: 12%;
+}
+
+#home .navigation a {
+  color: #fff;
+  text-align: center;
+  padding: 22px 24px;
+  font-size: 21px;
+  font-family: serif;
+  font-weight: bold;
+}
+
+#home.navigation a:hover {
+  border-top: 3px solid #c6c3b9;
+}
+
+.navigation .span-logo:hover {
+  filter:sepia(1);
+}
+
+.navigation a.span-logo {
+  padding-left: 10px;
+}
+
+.navigation .icon {
+  color: #ffffff;
+  display: none;
+}
+
+.container{
+
+  background-image: url("../image/Bg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+/*PROMO*/
+}
+.promo{
+   display: flex;
+
+   flex-direction:column;
+   flex-wrap:wrap;
+   width:100%;
+   text-align: center;
+   padding:10px 0 100px 0;
+}
+.promo h1{
+  text-align: center;
+  color: #ffffff;
+  font-family: yeseva;
+  font-size:100px;
+  font-weight: bold;
+
+}
+.promo .buttons{
+  margin-left:0%;
+  margin-top: 3px;
+  margin-bottom:33px;
+  max-width:100%;
+}
+
+.promo .buttons input{
+  padding:0px 15px;
+}
+.promo img{
+  
+  max-width:100%;
+
+  justify-content: center;
+  padding: 25px;
+
+
+}
+
+.promo .buttons .black:hover{
+  opacity: 0.3;
+
+}
+
+.promo .buttons .white:hover{
+  opacity: 0.3;
+
+}
+
+@media screen and (max-width:1278px){
+  .navigation a{
+    display:none;
+  }
+
+  .navigation a.icon{
+    color: #ffffff;
+    float:right;
+    margin-top:-29px;
+    display:block;
+    color:#000000;
+    font-size:25px;
+  }
+  nav{
+    width:100%;
+  }
+  .navigation.responsive{
+    position:relative;
+    top:50px;
+    left:-200px;
+  }
+  header .navigation.responsive{
+    height:340px;
+  }
+  .navigation.responsive a.icon{
+    color: #ffffff;
+    position: absolute;
+    top:-50px;
+    right:-200px;
+  }
+  .navigation.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

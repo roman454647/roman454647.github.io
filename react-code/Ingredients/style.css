@@ -1,0 +1,94 @@
+.wrapper-ingredients{
+
+  background-image: url("../image/bg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+.section-ingredients{
+
+  background-image: url("../image/bg4.png");
+  background-repeat: no-repeat;
+  background-position: 73% ;
+  padding-top: 170px;
+  padding-bottom: 150px;
+
+}
+.section-ingredients h1{
+
+
+
+  font-size: 36px;
+  padding-bottom: 17px;
+  color:#ffffff;
+  margin-left: 59.5%;
+}
+.divider2{
+
+  margin-left: 60%;
+  max-width:100%;
+  justify-content:center;
+
+}
+
+
+.section-ingredients p{
+  font-family: lato;
+  line-height: 1.5;
+  font-size: 16px;
+  padding-top: 30px;
+  color: #ffffff;
+  margin-left: 55%;
+
+}
+
+.product_image{
+ padding-top: 80px;
+ margin-left:55%;
+
+
+}
+
+.product_image img{
+   padding-left: 15px;
+   margin-left: 0px;
+
+}
+
+@media screen and (max-width:1660px){
+  .section-ingredients{
+  background-position: 80% ;
+  }
+}
+
+  @media screen and (max-width:1414px){
+    .section-ingredients{
+background-position: 83% ;
+}
+}
+
+@media screen and (max-width:1278px){
+  .section-ingredients{
+    background-position: center;
+  }
+.section-ingredients .divider2{
+  text-align: center;
+  margin-left: 0% ;
+}
+.section-ingredients p{
+  text-align: center;
+  padding-left: 3px;
+  margin-left: 0% ;
+}
+  .section-ingredients h1{
+    text-align: center;
+    margin-left: 0% ;
+  }
+  .wrapper-ingredients div{
+    text-align: center;
+    margin:0%;
+
+  }
+}

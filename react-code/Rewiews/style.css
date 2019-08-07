@@ -1,0 +1,63 @@
+ .wrapper-rewiews{
+  background-image: url("../image/bg_slider.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+
+ .Rewiews{
+  background-image: url("../image/bg6_slider.png");
+  width:100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  margin-left: 27%;
+}
+
+  .rewiew{
+  color:#ffffff;
+  padding-top: 78px;
+  padding-bottom: 100px;
+}
+
+.rewiew img{
+  margin-left: 0%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.rewiew h1{
+  font-family: yeseva;
+   font-size: 36px;
+}
+
+.rewiew p{
+  line-height: 2;
+  font-family: gentium;
+  font-size: 25px;
+  padding-bottom: 50px;
+
+}
+
+ .rewiew h2{
+   font-size: 18px;
+ }
+
+ @media screen and (max-width:1278px){
+    .Rewiews{
+
+     display:flex;
+     justify-content: center;
+     margin-left: 10%;
+   }
+  .rewiew{
+     text-align: center;
+     margin-left: 0%;
+   }
+
+
+}

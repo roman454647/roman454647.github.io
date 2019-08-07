@@ -1,0 +1,71 @@
+.wrapper_foot{
+  background-image: url("../image/background-foo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.info{
+  display: flex;
+
+  text-align: center;
+  padding: 50px 60px 70px 60px;
+}
+
+.info h1 {
+  font-family: yeseva;
+  font-size: 21px;
+  font-weight: bold;
+  color:#ffffff;
+  margin-bottom: 20px;
+}
+
+.info p{
+  line-height: 1.5;
+  font-size: 16px;
+  color:#ffffff;
+  margin-top: 20px;
+
+}
+.About{
+  margin-left: 18.5%
+}
+.open{
+  margin-left:160px;
+}
+.Our-Location{
+  margin-left: 190px;
+
+}
+.Our-Location{
+  margin-left: 190px;
+
+}
+
+.Our-Location img{
+  margin-top: 10px;
+}
+
+.Our-Location h1{
+  margin-bottom: 10px;
+}
+.info span{
+  font-weight: bold;
+}
+@media screen and (max-width:1278px){
+  .info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-left: 0px;
+}
+.About p{
+   font-size: 13px;
+   text-align: center;
+ }
+ .info div{
+   margin-left: 0px;
+ }
+}
